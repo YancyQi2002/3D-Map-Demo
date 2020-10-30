@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地球地图</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <!-- [if lt IE 9]>
+  	    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <![engif] -->
+    <!--[if lte IE 8]> 
+	    <noscript>
+  	    	<style>.html5-wrappers{display:none!important;}</style>
+  	    	<div class="ie-noscript-warning">您的浏览器禁用了脚本，如果您的电脑是Windows7 x64的，请<a href="http://download.microsoft.com/download/5/6/F/56FD6253-CB53-4E38-94C6-74367DA2AB34/IE11-Windows6.1-x64-zh-cn.exe">升级浏览器</a>来启用脚本!或者<a href="/?noscript=1">继续访问</a>.
+  	    	</div>
+  	    </noscript>
+    <![endif]-->
+    <style type="text/css">
+        body, html, #allmap {
+            margin:0;
+            width: 100%;
+            height: 100%;
+            font-family: "century gothic","微软雅黑";
+            overflow: hidden;
+        }
+    </style>
+    <script language="javascript">
+        alert("建议使用Chrome浏览器！")
+    </script>
+    <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=i8U2ZbLGQvLKAj4RMlP0ednF1sScpi5s"></script>
+</head>
+<body>
+    <div id="allmap"></div>
+    <script type="text/javascript">
+        // GL版命名空间为BMapGL
+        var map = new BMapGL.Map("allmap");    // 创建Map实例
+        map.centerAndZoom(new BMapGL.Point(116.404269,39.916263), 5);  // 初始化地图,设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        map.setMapType(BMAP_EARTH_MAP);      // 设置地图类型为地球模式
+    </script>
+</body>
+</html>
